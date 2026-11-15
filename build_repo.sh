@@ -73,14 +73,15 @@ p.m{color:var(--muted)}
 </style></head><body>
 <h1>SecretSpace apt repository</h1>
 <p>Packages of <a href="https://github.com/usermaneGermane/SecretSpace-Client-Linux">SecretSpace for Linux</a>
-for Ubuntu 22.04 or newer and Debian 12 or newer, signed with the key below.</p>
+(<code>secretspace</code>) and <a href="https://github.com/usermaneGermane/SecretSpace-Server-Linux">SecretSpace Server</a>
+(<code>secretspace-server</code>) for Ubuntu 22.04 or newer and Debian 12 or newer, signed with the key below.</p>
 <pre>sudo install -d -m 0755 /etc/apt/keyrings
 curl -fsSL https://usermanegermane.github.io/SecretSpace-apt/secretspace.gpg \\
   | sudo tee /etc/apt/keyrings/secretspace.gpg &gt; /dev/null
 echo "deb [signed-by=/etc/apt/keyrings/secretspace.gpg] https://usermanegermane.github.io/SecretSpace-apt stable main" \\
   | sudo tee /etc/apt/sources.list.d/secretspace.list
 sudo apt update
-sudo apt install secretspace</pre>
+sudo apt install secretspace          # or: secretspace-server</pre>
 <p>Signing key fingerprint: <code>$fpr</code></p>
 <h2>Packages</h2><ul>$packages</ul>
 <p class="m">Built $(date -u +%Y-%m-%d) from the Latest GitHub releases.</p>

@@ -71,9 +71,10 @@ jobs:
             > /etc/apt/sources.list.d/secretspace.list
           # Pages may take a moment to serve the new files everywhere.
           for try in 1 2 3 4 5; do
-            apt-get update -q && apt-get install -y -q secretspace && break
+            apt-get update -q && apt-get install -y -q secretspace secretspace-server && break
             [ "$try" = 5 ] && exit 1
             sleep 20
           done
-          dpkg-query -W secretspace
+          dpkg-query -W secretspace secretspace-server
+          test -x /usr/sbin/secretspace-setup
           test -x /usr/bin/secretspace
