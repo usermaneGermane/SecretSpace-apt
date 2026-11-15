@@ -1,6 +1,8 @@
 # SecretSpace apt repository
 
-The apt repository for [SecretSpace for Linux](https://github.com/usermaneGermane/SecretSpace-Client-Linux),
+The apt repository for [SecretSpace for Linux](https://github.com/usermaneGermane/SecretSpace-Client-Linux)
+(package `secretspace`) and [SecretSpace Server](https://github.com/usermaneGermane/SecretSpace-Server-Linux)
+(package `secretspace-server`),
 published on GitHub Pages at **https://usermanegermane.github.io/SecretSpace-apt**.
 With it, `sudo apt install secretspace` installs SecretSpace and `sudo apt upgrade`
 keeps it up to date with everything else.
@@ -16,7 +18,8 @@ curl -fsSL https://usermanegermane.github.io/SecretSpace-apt/secretspace.gpg \
 echo "deb [signed-by=/etc/apt/keyrings/secretspace.gpg] https://usermanegermane.github.io/SecretSpace-apt stable main" \
   | sudo tee /etc/apt/sources.list.d/secretspace.list
 sudo apt update
-sudo apt install secretspace
+sudo apt install secretspace          # the app
+sudo apt install secretspace-server   # the sync server
 ```
 
 The key is trusted for this repository only (`signed-by`), not for the rest of

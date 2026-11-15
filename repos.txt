@@ -1,3 +1,4 @@
 # The repositories whose Latest release holds a .deb for the apt repository.
 # One per line; each must also publish SHA256SUMS.txt.
 usermaneGermane/SecretSpace-Client-Linux
+usermaneGermane/SecretSpace-Server-Linux
