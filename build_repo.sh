@@ -82,6 +82,9 @@ echo "deb [signed-by=/etc/apt/keyrings/secretspace.gpg] https://usermanegermane.
   | sudo tee /etc/apt/sources.list.d/secretspace.list
 sudo apt update
 sudo apt install secretspace          # or: secretspace-server</pre>
+<p>On a fresh Ubuntu, if apt says <code>python3-tk</code>, <code>python3-argon2</code> or
+<code>python3-pil.imagetk</code> is not installable: run <code>sudo apt update</code>, then
+<code>sudo add-apt-repository universe</code> and <code>sudo apt update</code>, and install again.</p>
 <p>Signing key fingerprint: <code>$fpr</code></p>
 <h2>Packages</h2><ul>$packages</ul>
 <p class="m">Built $(date -u +%Y-%m-%d) from the Latest GitHub releases.</p>
