@@ -22,6 +22,13 @@ sudo apt install secretspace          # the app
 sudo apt install secretspace-server   # the sync server
 ```
 
+On a fresh Ubuntu, `secretspace` may stop with *"has unmet dependencies …
+is not installable"* for `python3-tk`, `python3-argon2` or
+`python3-pil.imagetk`. That means the package lists were never downloaded
+or the *universe* section (where Argon2 is) is off. Run `sudo apt update`,
+then `sudo add-apt-repository universe` and `sudo apt update` again, then
+install again.
+
 The key is trusted for this repository only (`signed-by`), not for the rest of
 your system's sources. Its fingerprint:
 
